@@ -1,0 +1,136 @@
+body {
+            background-color: rgb(230, 236, 240) !important;
+            overflow-y: scroll;
+        }
+        nav.navbar  {
+            padding: 0 !important;
+            border-bottom: 1px solid rgb(101, 119, 134, 0.5);
+        }
+        nav.navbar > .container {
+            max-width: 1000px !important;
+            padding: 0px 10px !important;
+        }
+        ul.navbar-nav > li.nav-item > a.nav-link {
+            width: 90px !important;
+            height: 52.5px !important;
+            line-height: 34.5px !important;
+            text-align: center !important;
+            border-bottom: 2px solid #fff;
+            font-size: 15px !important;
+        }
+        ul.navbar-nav > li.active > a.nav-link {
+            border-bottom-color: rgba(29,161,242,1.00);
+        }
+        ul.navbar-nav > li.nav-item > a.nav-link:hover {
+            border-bottom-color: rgba(29,161,242,1.00);
+        }
+        ul.navbar-nav > li.nav-item > a.nav-link > svg {
+            max-width: 100%;
+            height: 1.640625rem;
+            fill: rgb(101, 119, 134) !important;
+        }
+        ul.navbar-nav > li.active > a.nav-link > svg {
+            max-width: 100%;
+            height: 1.640625rem;
+            fill: rgba(29,161,242,1.00) !important;
+        }
+        .search {
+            background-color: rgba(101, 119, 134, 0.15) !important;
+            font-family: Helvetica, sans-serif;
+        }
+        .search:focus {
+            box-shadow: none !important;
+        }
+
+        .twPc-div {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    height: 200px;
+    max-width: 340px; // orginal twitter width: 290px;
+}
+.twPc-bg {
+    background-image: url("https://pbs.twimg.com/profile_banners/50988711/1384539792/600x200");
+    background-position: 0 50%;
+    background-size: 100% auto;
+    border-bottom: 1px solid #e1e8ed;
+    border-radius: 4px 4px 0 0;
+    height: 95px;
+    width: 100%;
+}
+.twPc-block {
+    display: block !important;
+}
+.twPc-button {
+    margin: -35px -10px 0;
+    text-align: right;
+    width: 100%;
+}
+.twPc-avatarLink {
+    background-color: #fff;
+    border-radius: 6px;
+    display: inline-block !important;
+    float: left;
+    margin: -30px 5px 0 8px;
+    max-width: 100%;
+    padding: 1px;
+    vertical-align: bottom;
+}
+.twPc-avatarImg {
+    border: 2px solid #fff;
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: #fff;
+    height: 72px;
+    width: 72px;
+}
+.twPc-divUser {
+    margin: 5px 0 0;
+}
+.twPc-divName {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.twPc-divName a {
+    color: inherit !important;
+}
+.twPc-divStats {
+    margin-left: 11px;
+    padding: 10px 0;
+}
+.twPc-Arrange {
+    box-sizing: border-box;
+    display: table;
+    margin: 0;
+    min-width: 100%;
+    padding: 0;
+    table-layout: auto;
+}
+ul.twPc-Arrange {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+.twPc-ArrangeSizeFit {
+    display: table-cell;
+    padding: 0;
+    vertical-align: top;
+}
+.twPc-ArrangeSizeFit a:hover {
+    text-decoration: none;
+}
+.twPc-StatValue {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.15s ease-in-out 0s;
+}
+.twPc-StatLabel {
+    color: #8899a6;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: color 0.15s ease-in-out 0s;
+}

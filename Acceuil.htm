@@ -1,0 +1,844 @@
+
+<!-- saved from url=(0043)http://localhost:8888/tweeter_save/home.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Acceuil_files/jquery.min.js"></script>
+<link href="./Acceuil_files/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="./Acceuil_files/bootstrap.min.js"></script>
+
+
+
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acceuil</title>
+    <link rel="stylesheet" href="./Acceuil_files/bootstrap.min(1).css">
+
+    <link rel="stylesheet" type="text/css" href="./Acceuil_files/home.css">
+    <link rel="stylesheet" href="./Acceuil_files/all.css">
+</head>
+
+<body>
+
+    <!-- LA NAV BAR -->
+
+    <nav class="navbar navbar-expand navbar-light bg-white">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="http://localhost:8888/tweeter_save/home.php" class="nav-link">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path d="M22.46 7.57L12.357 2.115c-.223-.12-.49-.12-.713 0L1.543 7.57c-.364.197-.5.652-.303 1.017.135.25.394.393.66.393.12 0 .243-.03.356-.09l.815-.44L4.7 19.963c.214 1.215 1.308 2.062 2.658 2.062h9.282c1.352 0 2.445-.848 2.663-2.087l1.626-11.49.818.442c.364.193.82.06 1.017-.304.196-.363.06-.818-.304-1.016zm-4.638 12.133c-.107.606-.703.822-1.18.822H7.36c-.48 0-1.075-.216-1.178-.798L4.48 7.69 12 3.628l7.522 4.06-1.7 12.015z"></path>
+                                    <path d="M8.22 12.184c0 2.084 1.695 3.78 3.78 3.78s3.78-1.696 3.78-3.78-1.695-3.78-3.78-3.78-3.78 1.696-3.78 3.78zm6.06 0c0 1.258-1.022 2.28-2.28 2.28s-2.28-1.022-2.28-2.28 1.022-2.28 2.28-2.28 2.28 1.022 2.28 2.28z"></path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="http://localhost:8888/tweeter_save/recherche_hashtag.php" class="nav-link">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path d="M21 7.337h-3.93l.372-4.272c.036-.412-.27-.775-.682-.812-.417-.03-.776.27-.812.683l-.383 4.4h-6.32l.37-4.27c.037-.413-.27-.776-.68-.813-.42-.03-.777.27-.813.683l-.382 4.4H3.782c-.414 0-.75.337-.75.75s.336.75.75.75H7.61l-.55 6.327H3c-.414 0-.75.336-.75.75s.336.75.75.75h3.93l-.372 4.272c-.036.412.27.775.682.812l.066.003c.385 0 .712-.295.746-.686l.383-4.4h6.32l-.37 4.27c-.036.413.27.776.682.813l.066.003c.385 0 .712-.295.746-.686l.382-4.4h3.957c.413 0 .75-.337.75-.75s-.337-.75-.75-.75H16.39l.55-6.327H21c.414 0 .75-.336.75-.75s-.336-.75-.75-.75zm-6.115 7.826h-6.32l.55-6.326h6.32l-.55 6.326z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="http://localhost:8888/tweeter_save/message.php" class="nav-link">
+                            <svg viewBox="0 0 24 24">
+                                <g>
+                                    <path d="M19.25 3.018H4.75C3.233 3.018 2 4.252 2 5.77v12.495c0 1.518 1.233 2.753 2.75 2.753h14.5c1.517 0 2.75-1.235 2.75-2.753V5.77c0-1.518-1.233-2.752-2.75-2.752zm-14.5 1.5h14.5c.69 0 1.25.56 1.25 1.25v.714l-8.05 5.367c-.273.18-.626.182-.9-.002L3.5 6.482v-.714c0-.69.56-1.25 1.25-1.25zm14.5 14.998H4.75c-.69 0-1.25-.56-1.25-1.25V8.24l7.24 4.83c.383.256.822.384 1.26.384.44 0 .877-.128 1.26-.383l7.24-4.83v10.022c0 .69-.56 1.25-1.25 1.25z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <form action="http://localhost:8888/tweeter_save/search.php" method="get" class="form-inline w-100 d-none d-md-block ml-2">
+                    <input type="text" name="search" class="form-control form-control-sm rounded-pill search border-0 px-3 w-100" placeholder="Rechercher...">
+                    <select name="type">
+                        <option value="Tweet">Tweet/Hashtag</option>
+                        <option value="User">Utilisateurs</option>
+                    </select>
+                    <input type="submit" value="Rechercher">
+                </form>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="http://localhost:8888/tweeter_save/home.php#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 26 26" style=" fill:#000000;">
+                            <g id="surface1">
+                                <path style=" " d="M 13 0 C 5.832031 0 0 5.832031 0 13 C 0 20.167969 5.832031 26 13 26 C 20.167969 26 26 20.167969 26 13 C 26 5.832031 20.167969 0 13 0 Z M 13 2 C 19.085938 2 24 6.914063 24 13 C 24 15.859375 22.90625 18.453125 21.125 20.40625 C 20.375 19.027344 18.167969 17.894531 15.8125 17.40625 C 15.8125 17.40625 14.6875 17.101563 15.1875 16 C 15.886719 15.101563 16.3125 14.113281 16.3125 13.8125 C 16.3125 13.8125 17.304688 13.011719 17.40625 11.8125 C 17.507813 10.710938 17.1875 10.59375 17.1875 10.59375 C 17.585938 9.292969 17.695313 4.398438 14.59375 5 C 14.09375 4 10.8125 3.207031 9.3125 5.90625 C 8.613281 7.207031 8.300781 9.101563 9 10.5 C 9 10.601563 8.789063 10.394531 8.6875 11.09375 C 8.6875 11.792969 9.011719 12.789063 9.3125 13.1875 C 9.414063 13.386719 9.613281 13.492188 9.8125 13.59375 C 9.8125 13.59375 10.007813 14.804688 10.90625 15.90625 C 11.105469 16.804688 10.1875 17.3125 10.1875 17.3125 C 7.75 17.800781 5.535156 18.933594 4.78125 20.3125 C 3.050781 18.371094 2 15.8125 2 13 C 2 6.914063 6.914063 2 13 2 Z "></path>
+                            </g>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="http://localhost:8888/tweeter_save/profil.php">Profil</a>
+                        <a class="dropdown-item" href="http://localhost:8888/tweeter_save/option.php">Paramètre</a>
+                        <a class="dropdown-item" href="http://localhost:8888/tweeter_save/logout.php">Déconnexion</a>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- LA PROFIL CARD -->
+
+    <div class="all container">
+        <div class="lol row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="card hovercard">
+                    <div class="cardheader">
+
+                    </div>
+                    <div class="avatar">
+                        <img alt="" src="./Acceuil_files/saved_resource">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="http://localhost:8888/tweeter_save/profil.php">Draanh</a>
+                        </div>
+                        <div class="desc">Pays : France</div>
+                        <div class="desc">Nom : imperinetti</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L'ESPACE TWEET -->
+
+            <div class="container_tweet">
+                <div class="zone_texte">
+                    <div id="lol">
+                        <div class="panel panel-default">
+                            <script src="./Acceuil_files/jquery.min(1).js"></script>
+                            <div class="panel-body" id="resizable">
+                                <form accept-charset="UTF-8" action="http://localhost:8888/tweeter_save/postTweet.php" method="POST" id="postTweet">
+                                    <textarea id="fullfilled" class="form-control counted" name="tweet" placeholder="Type in your message" rows="5" style="margin-bottom:10px;" required=""></textarea>
+                                    <div class="counterBlock">
+                                        <p id="counterBlock">140</p>
+                                        <button class="btn btn-info" name="submitTweet" type="submit">Tweeter</button>
+                                    </div>
+                                </form>
+                                <div class="tweet">
+                                    
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet"><a href="http://localhost:8888/tweeter_save/search.php?search=chaton&amp;type=Tweet">#chaton</a></p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">#tropbo</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">tg</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">salope</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">j'aime les pates</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">coucou</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">tweet test</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">coucou</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> Draanh</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@Draanh</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">salut je suis un admin
+</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">hello
+</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">lulu
+</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">salut .  </p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">echo "coucou";
+</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">hdhdhdhd</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">parfait</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">test</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">ko technique</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">blablabla</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">coucou</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="container_bis">
+            <div class="tweet-card">
+                <img class="avatar" src="./Acceuil_files/wPB3Jrkt_400x400.png">
+
+                <div class="content">
+                    <div class="author">
+                        <a href="http://localhost:8888/tweeter_save/profil.php" class="twitter-name" target="_blank"> 1998-03-22</a>
+                        <span class="twitter-handle"><a href="http://localhost:8888/tweeter_save/home.php#"></a>@1998-03-22</span>
+                        <a href="http://localhost:8888/tweeter_save/home.php#" class="twitter-time">Il y a --min</a>
+                    </div>
+
+                    <p class="tweet">rr</p>
+
+                    <ul class="actions">
+                        <li>
+                            <button>
+                                <span class="fas fa-reply"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-retweet"></span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <span class="fas fa-heart"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./Acceuil_files/script.js"></script>
+
+
+
+</body></html>
